@@ -30,7 +30,7 @@ test:
     - ninja --version
 
 about:
-  home: http://martine.github.io/ninja/
+  home: https://ninja-build.org/
   license: Apache License, Version 2.0
   summary: A small build system with a focus on speed
 
