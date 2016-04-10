@@ -1,7 +1,7 @@
 About ninja
 ===========
 
-Home: http://martine.github.io/ninja/
+Home: https://ninja-build.org/
 
 Package license: Apache License, Version 2.0
 
