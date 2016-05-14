@@ -5,7 +5,7 @@ Home: https://ninja-build.org/
 
 Package license: Apache License, Version 2.0
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A small build system with a focus on speed
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ninja-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/ninja-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/ninja-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ninja-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ninja-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ninja-feedstock/branch/master)
