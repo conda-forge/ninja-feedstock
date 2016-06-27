@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: ninja
@@ -7,7 +7,7 @@ package:
 source:
   fn: v{{ version }}.tar.gz
   url: https://github.com/ninja-build/ninja/archive/v{{ version }}.tar.gz
-  sha1: a6ff055691f6d355234298c21cc18961b4ca2ed9
+  sha1: 556ed5f8ee49753af1cf4b0ab2315d39d1954d58
 
 build:
   number: 0
