@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: ninja
@@ -7,7 +7,7 @@ package:
 source:
   fn: v{{ version }}.tar.gz
   url: https://github.com/ninja-build/ninja/archive/v{{ version }}.tar.gz
-  sha1: 556ed5f8ee49753af1cf4b0ab2315d39d1954d58
+  sha1: a50e9008e90339d052f741e9c52a3475aa108fbb
 
 build:
   number: 0
@@ -16,8 +16,7 @@ build:
   # building it on every python version. On the other hand, Windows CI fails
   # to build Ninja using Python 3.5, so we stick to Python 2.7 for all
   # platforms to be consistent.
-  skip: True
-  skip: False  # [py27]
+  skip: True  # [not py27]
 
 requirements:
   build:
@@ -31,7 +30,9 @@ test:
 
 about:
   home: https://ninja-build.org/
-  license: Apache License, Version 2.0
+  license: Apache 2.0
+  license_family: Apache
+  license_file: COPYING
   summary: A small build system with a focus on speed
 
 extra:
