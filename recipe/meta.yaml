@@ -1,4 +1,4 @@
-{% set version = "1.7.2" %}
+{% set version = "1.8.2" %}
 
 package:
   name: ninja
@@ -7,7 +7,7 @@ package:
 source:
   fn: v{{ version }}.tar.gz
   url: https://github.com/ninja-build/ninja/archive/v{{ version }}.tar.gz
-  sha1: a50e9008e90339d052f741e9c52a3475aa108fbb
+  sha256: 86b8700c3d0880c2b44c2ff67ce42774aaf8c28cbf57725cb881569288c1c6f4
 
 build:
   number: 0
@@ -38,3 +38,4 @@ about:
 extra:
   recipe-maintainers:
     - frol
+    - Korijn
