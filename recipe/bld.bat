@@ -3,7 +3,3 @@ if errorlevel 1 exit 1
 
 COPY ninja.exe %LIBRARY_BIN%\ninja.exe
 if errorlevel 1 exit 1
-
-cd %LIBRARY_BIN%
-cd ..
-dir /s/b *.bat
