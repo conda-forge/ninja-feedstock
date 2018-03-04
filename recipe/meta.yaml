@@ -16,7 +16,7 @@ build:
   # building it on every python version. On the other hand, Windows CI fails
   # to build Ninja using Python 3.5, so we stick to Python 2.7 for all
   # platforms to be consistent.
-  skip: True  # [not py36]
+  skip: True  # [not py27]
 
 requirements:
   build:
