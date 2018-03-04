@@ -10,7 +10,7 @@ source:
   sha256: 86b8700c3d0880c2b44c2ff67ce42774aaf8c28cbf57725cb881569288c1c6f4
 
 build:
-  number: 0
+  number: 1
   msvc_compiler: 14.0  # [win]
   # NOTE: Ninja is agnostic to the Python version, so there is no point in
   # building it on every python version. On the other hand, Windows CI fails
