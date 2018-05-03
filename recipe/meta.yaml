@@ -11,18 +11,12 @@ source:
 
 build:
   number: 1
-  msvc_compiler: 14.0  # [win]
-  # NOTE: Ninja is agnostic to the Python version, so there is no point in
-  # building it on every python version. On the other hand, Windows CI fails
-  # to build Ninja using Python 3.5, so we stick to Python 2.7 for all
-  # platforms to be consistent.
-  skip: True  # [not py27]
+  skip: true  # [win and vc!=14]
 
 requirements:
   build:
+    - {{ compiler("cxx") }}
     - python
-  run:
-    - vc 14  # [win]
 
 test:
   commands:
