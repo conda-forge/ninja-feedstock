@@ -12,11 +12,16 @@ source:
 build:
   number: 1
   skip: true  # [win and vc!=14]
+  ignore_run_exports:
+    - vc
 
 requirements:
   build:
     - {{ compiler("cxx") }}
     - python
+
+  run:
+    - vs2015_runtime  # [win]
 
 test:
   commands:
