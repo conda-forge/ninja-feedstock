@@ -14,14 +14,16 @@ Summary: A small build system with a focus on speed
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ninja-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ninja-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ninja-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ninja-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ninja-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ninja-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ninja-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ninja-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ninja-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ninja-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ninja-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ninja-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ninja/badges/version.svg)](https://anaconda.org/conda-forge/ninja)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ninja/badges/downloads.svg)](https://anaconda.org/conda-forge/ninja)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ninja-green.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) |
 
 Installing ninja
 ================
