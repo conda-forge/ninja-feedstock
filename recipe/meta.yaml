@@ -1,16 +1,24 @@
 {% set version = "1.9.0" %}
+{% set archive_version = "1.9.0.g99df1.kitware.dyndep-1.jobserver-1" %}
 
 package:
   name: ninja
   version: {{ version }}
 
+# Kitware maintains this branch of Ninja in order to provide features
+# that have not yet been integrated upstream:
+#
+# * Dynamic dependency discovery needed for Fortran builds
+# * make-style jobserver support
+#
+# See https://github.com/Kitware/ninja
 source:
-  fn: v{{ version }}.tar.gz
-  url: https://github.com/ninja-build/ninja/archive/v{{ version }}.tar.gz
-  sha256: 5d7ec75828f8d3fd1a0c2f31b5b0cea780cdfe1031359228c428c1a48bfcd5b9
+  fn: v{{ archive_version }}.tar.gz
+  url: https://github.com/kitware/ninja/archive/v{{ archive_version }}.tar.gz
+  sha256: b7bc3d91e906b92d2e0887639e8ed6b0c45b28e339dda2dbb66c1388c86a9fcf
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc!=14]
   ignore_run_exports:
     - vc
