@@ -1,16 +1,17 @@
 {% set version = "1.9.0" %}
+{% set archive_version = "28a7d1491367de7b39c854d166114f76d272f04f" %}
 
 package:
   name: ninja
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
-  url: https://github.com/ninja-build/ninja/archive/v{{ version }}.tar.gz
-  sha256: 5d7ec75828f8d3fd1a0c2f31b5b0cea780cdfe1031359228c428c1a48bfcd5b9
+  fn: {{ archive_version }}.tar.gz
+  url: https://github.com/ninja-build/ninja/archive/{{ archive_version }}.tar.gz
+  sha256: ed625f642ea113299d42facacf90e3135b87d2f83c6ed1040b710b6afdbedc9d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc!=14]
   ignore_run_exports:
     - vc
