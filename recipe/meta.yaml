@@ -10,7 +10,7 @@ source:
   sha256: 3810318b08489435f8efc19c05525e80a993af5a55baa0dfeae0465a9d45f99f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc!=14]
   ignore_run_exports:
     - vc
