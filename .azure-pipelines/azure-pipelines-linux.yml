@@ -10,56 +10,16 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_python2.7.____cpython:
-        CONFIG: linux_python2.7.____cpython
+      linux_:
+        CONFIG: linux_
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.6.____73_pypy:
-        CONFIG: linux_python3.6.____73_pypy
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.6.____cpython:
-        CONFIG: linux_python3.6.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.7.____cpython:
-        CONFIG: linux_python3.7.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.8.____cpython:
-        CONFIG: linux_python3.8.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_aarch64_python3.6.____73_pypy:
-        CONFIG: linux_aarch64_python3.6.____73_pypy
+      linux_aarch64_:
+        CONFIG: linux_aarch64_
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.6.____cpython:
-        CONFIG: linux_aarch64_python3.6.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.7.____cpython:
-        CONFIG: linux_aarch64_python3.7.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.8.____cpython:
-        CONFIG: linux_aarch64_python3.8.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-aarch64
-      linux_ppc64le_python3.6.____73_pypy:
-        CONFIG: linux_ppc64le_python3.6.____73_pypy
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.6.____cpython:
-        CONFIG: linux_ppc64le_python3.6.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.7.____cpython:
-        CONFIG: linux_ppc64le_python3.7.____cpython
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.8.____cpython:
-        CONFIG: linux_ppc64le_python3.8.____cpython
+      linux_ppc64le_:
+        CONFIG: linux_ppc64le_
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-ppc64le
   steps:
