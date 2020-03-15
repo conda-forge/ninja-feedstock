@@ -15,6 +15,7 @@ build:
   ignore_run_exports:
     - vc
     - python
+    - python_abi
 
 requirements:
   build:
