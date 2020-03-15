@@ -14,8 +14,7 @@ build:
   skip: true  # [win and vc!=14]
   ignore_run_exports:
     - vc
-  noarch:
-    - python
+  noarch: python
 
 requirements:
   build:
