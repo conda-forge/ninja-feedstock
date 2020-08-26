@@ -10,7 +10,7 @@ if errorlevel 1 exit 1
 if not exist %LIBRARY_INC% mkdir %LIBRARY_INC%
 if errorlevel 1 exit 1
 
-%PYTHON% configure.py --bootstrap
+python configure.py --bootstrap
 if errorlevel 1 exit 1
 
 COPY ninja.exe %LIBRARY_BIN%\ninja.exe
