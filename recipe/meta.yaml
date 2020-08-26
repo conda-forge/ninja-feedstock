@@ -18,7 +18,8 @@ build:
 requirements:
   build:
     - {{ compiler("cxx") }}
-    - python
+    - python *
+  host:
   run:
     - vs2015_runtime  # [win]
 
