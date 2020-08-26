@@ -1,17 +1,10 @@
-if not exist %LIBRARY_PREFIX% mkdir %LIBRARY_PREFIX%
-if errorlevel 1 exit 1
+#!/bin/bash
 
-if not exist %LIBRARY_BIN% mkdir %LIBRARY_BIN%
-if errorlevel 1 exit 1
+mkdir -p build
+cd build
 
-if not exist %LIBRARY_LIB% mkdir %LIBRARY_LIB%
-if errorlevel 1 exit 1
+cmake -D CMAKE_BUILD_TYPE:STRING="Release" ^
+      -D CMAKE_PREFIX_PATH:FILEPATH="%PREFIX%" ^
+      ..
 
-if not exist %LIBRARY_INC% mkdir %LIBRARY_INC%
-if errorlevel 1 exit 1
-
-%PYTHON% configure.py --bootstrap
-if errorlevel 1 exit 1
-
-COPY ninja.exe %LIBRARY_BIN%\ninja.exe
-if errorlevel 1 exit 1
+make install

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mkdir -p "${PREFIX}"
-mkdir -p "${PREFIX}/bin"
-mkdir -p "${PREFIX}/include"
-mkdir -p "${PREFIX}/lib"
+mkdir -p build
+cd build
 
-./configure.py --bootstrap
+cmake -D CMAKE_BUILD_TYPE:STRING="Release" \
+      -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
+      ..
 
-cp -p ninja "$PREFIX/bin/ninja"
+make install
