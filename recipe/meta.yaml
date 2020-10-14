@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://ninja-build.org/
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: COPYING
   summary: A small build system with a focus on speed
