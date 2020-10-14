@@ -5,6 +5,11 @@ mkdir -p "${PREFIX}/bin"
 mkdir -p "${PREFIX}/include"
 mkdir -p "${PREFIX}/lib"
 
-./configure.py --bootstrap
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    ./configure.py
+    ninja
+else
+    ./configure.py --bootstrap
+fi
 
 cp -p ninja "$PREFIX/bin/ninja"
