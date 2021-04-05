@@ -1,6 +1,16 @@
 #!/bin/bash
 
-./configure.py --bootstrap
+mkdir -p "${PREFIX}"
+mkdir -p "${PREFIX}/bin"
+mkdir -p "${PREFIX}/include"
+mkdir -p "${PREFIX}/lib"
+
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    ./configure.py
+    ninja
+else
+    ./configure.py --bootstrap
+fi
 
 mkdir -p "$PREFIX/bin"
 

@@ -17,11 +17,11 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler("cxx") }}
+    - python *
+    - ninja  # [build_platform != target_platform]
   host:
-    - python
   run:
-    - python
     - vs2015_runtime  # [win]
 
 test:
@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://ninja-build.org/
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: COPYING
   summary: A small build system with a focus on speed
