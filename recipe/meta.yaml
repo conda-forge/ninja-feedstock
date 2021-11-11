@@ -10,7 +10,7 @@ source:
   sha256: ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc!=14]
   ignore_run_exports:
     - vc
@@ -20,8 +20,9 @@ requirements:
     - {{ compiler("cxx") }}
     - python
   host:
+    - python
   run:
-    - vs2015_runtime  # [win]
+    - python
 
 test:
   commands:
