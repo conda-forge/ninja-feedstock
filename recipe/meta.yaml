@@ -1,7 +1,8 @@
 {% set version = "1.10.2" %}
+{% set build_number = "5" %}
 
 package:
-  name: ninja
+  name: ninja-all
   version: {{ version }}
 
 source:
@@ -10,23 +11,45 @@ source:
   sha256: ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed
 
 build:
-  number: 3
   skip: true  # [win and vc!=14]
-  ignore_run_exports:
-    - vc
+  number: {{ build_number }}
 
-requirements:
-  build:
-    - {{ compiler("cxx") }}
-    - python
-  host:
-    - python
-  run:
-    - python
+outputs:
+  - name: ninja
+    script: build-ninja.sh  # [unix]
+    script: bld-ninja.bat   # [win]
+    build:
+      ignore_run_exports:
+        - vc
+    requirements:
+      build:
+        - {{ compiler("cxx") }}
+        - python
+        - cmake
+        - make  # [not win]
+      host:
+        - python
+      run:
+        - python
+    test:
+      commands:
+        - ninja --version
 
-test:
-  commands:
-    - ninja --version
+  - name: ninja-no-python
+    script: build-ninja.sh  # [unix]
+    script: bld-ninja.bat   # [win]
+    build:
+      ignore_run_exports:
+        - vc
+    requirements:
+      build:
+        - {{ compiler("cxx") }}
+        - cmake
+        - make  # [not win]
+    test:
+      commands:
+        - ninja --version
+
 
 about:
   home: https://ninja-build.org/
