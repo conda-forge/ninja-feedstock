@@ -1,10 +1,8 @@
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2017
 target_platform:
 - win-64
-vc:
-- '14'
