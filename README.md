@@ -1,5 +1,5 @@
-About ninja
-===========
+About ['ninja']
+=======
 
 Home: https://ninja-build.org/
 
@@ -30,42 +30,42 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=682&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ninja-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -82,27 +82,28 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-ninja-green.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ninja.svg)](https://anaconda.org/conda-forge/ninja) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--ninja-green.svg)](https://anaconda.org/conda-forge/python-ninja) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-ninja.svg)](https://anaconda.org/conda-forge/python-ninja) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-ninja.svg)](https://anaconda.org/conda-forge/python-ninja) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-ninja.svg)](https://anaconda.org/conda-forge/python-ninja) |
 
-Installing ninja
-================
+Installing ['ninja']
+============
 
-Installing `ninja` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `['ninja']` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `ninja` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `ninja, python-ninja` can be installed with `conda`:
 
 ```
-conda install ninja
+conda install ninja python-ninja
 ```
 
 or with `mamba`:
 
 ```
-mamba install ninja
+mamba install ninja python-ninja
 ```
 
 It is possible to list all of the versions of `ninja` available on your platform with `conda`:
@@ -172,17 +173,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating ninja-feedstock
-========================
+Updating ['ninja']-feedstock
+====================
 
-If you would like to improve the ninja recipe or build a new
+If you would like to improve the ['ninja'] recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/ninja-feedstock are
+Note that all branches in the conda-forge/['ninja']-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

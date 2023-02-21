@@ -1,7 +1,8 @@
+{% set name = "ninja" %}
 {% set version = "1.11.1" %}
 
 package:
-  name: ninja
+  name: {{ name }}-pkg
   version: {{ version }}
 
 source:
@@ -11,14 +12,38 @@ source:
 build:
   number: 0
 
-requirements:
-  build:
-    - {{ compiler("cxx") }}
-    - python *
+outputs:
+  - name: {{ name }}
+    script: build_ninja.sh  # [unix]
+    script: bld_ninja.bat  # [win]
+    requirements:
+      build:
+        - {{ compiler("cxx") }}
+        - python *
 
-test:
-  commands:
-    - ninja --version
+    test:
+      commands:
+        - ninja --version
+{% if linux %}
+  - name: python-{{ name }}
+    script: build_python.sh
+    build:
+      noarch: python
+    requirements:
+      host:
+        - pip
+        - python >=3.7
+        - setuptools
+      run:
+        - python >=3.7
+        - {{ name }} =={{ version }}
+    test:
+      requires:
+        - pip
+      commands:
+        - pip check
+        - ${PYTHON} -m ninja --version
+{% endif %}
 
 about:
   home: https://ninja-build.org/
@@ -32,3 +57,5 @@ extra:
     - frol
     - xhochy
     - henryiii
+  feedstock-name:
+    - {{ name }}
