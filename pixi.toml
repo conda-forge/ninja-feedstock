@@ -11,7 +11,7 @@ version = "3.47.2"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/ninja-feedstock"
 authors = ["@conda-forge/ninja"]
 channels = ["conda-forge"]
-platforms = ["linux-64", "linux-aarch64", "linux-ppc64le", "osx-64", "win", "win-64"]
+platforms = ["linux-64", "linux-aarch64", "linux-ppc64le", "osx-64", "win-64"]
 
 [dependencies]
 conda-build = ">=24.1"
@@ -61,6 +61,12 @@ description = "Build ninja-feedstock with variant win_64_ directly (without setu
 [tasks."inspect-win_64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
 description = "List contents of ninja-feedstock packages built for variant win_64_"
+[tasks."build-win_arm64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_.yaml"
+description = "Build ninja-feedstock with variant win_arm64_ directly (without setup scripts)"
+[tasks."inspect-win_arm64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_.yaml"
+description = "List contents of ninja-feedstock packages built for variant win_arm64_"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"

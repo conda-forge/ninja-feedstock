@@ -1,17 +1,16 @@
-if not exist %LIBRARY_PREFIX% mkdir %LIBRARY_PREFIX%
+@echo on
+
+mkdir build
+cd build
+
+cmake -G "NMake Makefiles" ^
+      %CMAKE_ARGS% ^
+      -DBUILD_TESTING=OFF ^
+      %SRC_DIR%
 if errorlevel 1 exit 1
 
-if not exist %LIBRARY_BIN% mkdir %LIBRARY_BIN%
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
-if not exist %LIBRARY_LIB% mkdir %LIBRARY_LIB%
-if errorlevel 1 exit 1
-
-if not exist %LIBRARY_INC% mkdir %LIBRARY_INC%
-if errorlevel 1 exit 1
-
-python configure.py --bootstrap
-if errorlevel 1 exit 1
-
-COPY ninja.exe %LIBRARY_BIN%\ninja.exe
+cmake --build . --target install
 if errorlevel 1 exit 1

@@ -18,11 +18,12 @@ requirements:
   build:
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
-    - python *
+    - cmake     
 
 tests:
-  - script:
-      - ninja --version
+  - package_contents:
+      bin:
+        - ninja
 
 about:
   license: Apache-2.0
@@ -35,3 +36,4 @@ extra:
     - frol
     - xhochy
     - henryiii
+    - baszalmstra
