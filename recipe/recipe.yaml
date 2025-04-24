@@ -18,7 +18,10 @@ requirements:
   build:
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
-    - cmake     
+    - cmake
+    - if: unix
+      then:
+        - make
 
 tests:
   - package_contents:
