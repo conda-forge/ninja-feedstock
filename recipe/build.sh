@@ -1,23 +1,14 @@
 #!/bin/bash
 
-mkdir -p "${PREFIX}"
-mkdir -p "${PREFIX}/bin"
-mkdir -p "${PREFIX}/include"
-mkdir -p "${PREFIX}/lib"
+set -ex # Abort on error.
 
-if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-    (
-        unset LDFLAGS
-        unset CXXFLAGS
-        export CXX=${CXX_FOR_BUILD}
+mkdir build
+cd build
 
-        ./configure.py --bootstrap
-        mv ninja ${BUILD_PREFIX}/bin/
-    )
-    ./configure.py
-    ninja
-else
-    ./configure.py --bootstrap
-fi
+cmake -G "Unix Makefiles" \
+      ${CMAKE_ARGS} \
+      -DBUILD_TESTING=OFF \
+      ${SRC_DIR}
 
-cp -p ninja "$PREFIX/bin/ninja"
+cmake --build . -j ${CPU_COUNT} --config Release
+cmake --build . --target install
