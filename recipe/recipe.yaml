@@ -27,6 +27,8 @@ tests:
   - package_contents:
       bin:
         - ninja
+  - script:
+    - ninja —version
 
 about:
   license: Apache-2.0
