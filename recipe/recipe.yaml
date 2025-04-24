@@ -28,7 +28,7 @@ tests:
       bin:
         - ninja
   - script:
-    - ninja —version
+    - ninja --version
 
 about:
   license: Apache-2.0
