@@ -7,7 +7,7 @@
 
 [project]
 name = "ninja-feedstock"
-version = "3.47.2"  # conda-smithy version used to generate this file
+version = "3.50.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/ninja-feedstock"
 authors = ["@conda-forge/ninja"]
 channels = ["conda-forge"]
